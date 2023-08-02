@@ -8,8 +8,8 @@ const scissorsAsset = "./assets/scissor.webp";
 let rockImg, paperImg, scissorsImg;
 let width = window.innerWidth;
 let height = window.innerHeight - 100;
-let entityCount = random(500);
-let velocityRange = random(10);
+let entityCount = random(100, 500);
+let velocityRange = random(5, 20);
 let entitySize = 35;
 
 function getImageForState(state) {
