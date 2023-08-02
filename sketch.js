@@ -113,8 +113,8 @@ function setup() {
   createCanvas(width, height);
   frameRate(24);
 
-  entityCount = random(100, 500);
-  velocityRange = random(5, 20);
+  entityCount = Math.floor(random(100, 500));
+  velocityRange = Math.floor(random(5, 20));
 
   setElementText("totalEntities", entityCount);
   setElementSrc("rockImg", rockAsset);
