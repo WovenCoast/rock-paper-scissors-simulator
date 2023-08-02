@@ -8,8 +8,7 @@ const scissorsAsset = "./assets/scissor.webp";
 let rockImg, paperImg, scissorsImg;
 let width = window.innerWidth;
 let height = window.innerHeight - 100;
-let entityCount = random(100, 500);
-let velocityRange = random(5, 20);
+let entityCount, velocityRange;
 let entitySize = 35;
 
 function getImageForState(state) {
@@ -113,6 +112,10 @@ function preload() {
 function setup() {
   createCanvas(width, height);
   frameRate(24);
+
+  entityCount = random(100, 500);
+  velocityRange = random(5, 20);
+
   setElementText("totalEntities", entityCount);
   setElementSrc("rockImg", rockAsset);
   setElementSrc("paperImg", paperAsset);
